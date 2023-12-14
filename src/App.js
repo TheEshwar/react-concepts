@@ -28,12 +28,12 @@ function App() {
 				></Route>
 				<Route path="order-summary" element={<OrderSummary />} />
 
-        {/* Products route's Nested routes */}
-				<Route path="products" element={<Products />} >
-          <Route path="featured" element={<FeatureProducts/>} />
-          <Route path="new" element={<NewProducts/>} />
-        </Route>
-
+				{/* Products route's Nested routes */}
+				<Route path="products" element={<Products />}>
+					<Route index element={<FeatureProducts />} />
+					<Route path="featured" element={<FeatureProducts />} />
+					<Route path="new" element={<NewProducts />} />
+				</Route>
 
 				<Route
 					path="/checkout"
