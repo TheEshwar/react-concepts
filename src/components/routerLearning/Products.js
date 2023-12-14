@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 function Products() {
@@ -10,6 +10,7 @@ function Products() {
                 <Link to="featured">Featured</Link>
                 <Link to="new">New</Link>
             </nav>
+            <Outlet/>
 		</>
 	);
 }
