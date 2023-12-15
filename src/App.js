@@ -10,6 +10,9 @@ import { OrderSummary } from "./components/routerLearning/OrderSummary";
 import Products from "./components/routerLearning/Products";
 import FeatureProducts from "./components/routerLearning/FeatureProducts";
 import NewProducts from "./components/routerLearning/NewProducts";
+import Users from "./components/routerLearning/Users";
+import UserDetails from "./components/routerLearning/UserDetails";
+import Admin from "./components/routerLearning/Admin";
 
 function App() {
 	const [cartIsEmpty] = useState(true);
@@ -33,6 +36,12 @@ function App() {
 					<Route index element={<FeatureProducts />} />
 					<Route path="featured" element={<FeatureProducts />} />
 					<Route path="new" element={<NewProducts />} />
+				</Route>
+
+				{/* Users and User details */}
+				<Route path="users" element={<Users />} >
+					<Route path=":userId/:city" element={<UserDetails />} />
+					<Route path="admin" element={<Admin/>} />
 				</Route>
 
 				<Route
